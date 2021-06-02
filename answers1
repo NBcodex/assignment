@@ -1,0 +1,23 @@
+'''
+step one store data to text file:
+'''
+with open('file.txt',"w+") as file:
+    content = file.write('This file contains 5 lines\n'
+                         'Line one is alone\n'
+                         'line two is tougher than line one\n'
+                         'line three have a lot of data inside it, but all is useless\n'
+                         'line four is gonna score\n'
+                         'line five will survive')
+    file.close()
+'''step 2: Read the file and append to the list or use readlines method that automatically put everything inside a list'''
+links = []
+with open("file.txt","r+") as f:
+    data = f.readlines()
+    # for line in data:
+    #     links.append(line)
+# for x in links:
+#     print(x.strip())
+for x in data:
+    print(x.strip())
+
+    
