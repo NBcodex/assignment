@@ -1,0 +1,21 @@
+import logging
+
+logger = logging.getLogger('sample')
+logger.setLevel(logging.INFO)
+'''debug messages'''
+new = logging.StreamHandler()
+new.setLevel(logging.ERROR)
+file = logging.FileHandler('spam.log')
+file.setLevel(logging.DEBUG)
+
+formats = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+new.setFormatter(formats)
+file.setFormatter(formats)
+logger.addHandler(file)
+logger.addHandler(new)
+
+logger.debug('debug message')
+logger.info('info message')
+logger.warning('warn message')
+logger.error('error message')
+logger.critical('critical message')
