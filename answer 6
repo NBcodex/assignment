@@ -1,0 +1,9 @@
+from array import *
+import binascii
+
+A1 = array('i', [1, 2, 3, 4, 5, 6])
+'''OUTPUT---->  Array of bytes: b'010000000200000003000000040000000500000006000000'''
+output = A1.tobytes()
+'''New concept, NICE!'''
+A2 = ("Array of Bytes: ", binascii.hexlify(output))
+print(A2)
