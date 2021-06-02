@@ -1,0 +1,19 @@
+from datetime import datetime
+''' as date format is not mentioned this question can have two answers'''
+
+
+format1 = "%Y%m%d"
+start = datetime.strptime("20200702",format1)
+end = datetime.strptime("20200711", format1)
+days = end - start
+print("According to 1st format",days.days, "days")
+
+
+
+format2 = "%Y%d%m"
+
+start = datetime.strptime("20200702",format2)
+end = datetime.strptime("20200711", format2)
+days = end - start
+print("According to 2nd format",days.days, "days")
+# print(type(days))
