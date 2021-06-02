@@ -1,0 +1,15 @@
+import json
+
+dictionary = {
+    'First Name':'Nishant',
+    "Last Name": 'Bansal',
+    "Age": "28",
+    "Sex": "Male",
+    "Position":"Python Developer",
+    "Applying For": "Internship",
+    "Company Name":'91 Social go digital',
+}
+# print(dictionary)
+dictionary = sorted(dictionary.keys())
+j = json.dumps(dictionary, indent=4)
+print(j)
