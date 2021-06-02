@@ -1,0 +1,20 @@
+with open("new file.txt",'w+') as file:
+    text = 'This,is the text i want to enter in the text file.' \
+           ' As there,is no time to look for text files in my laptop, ' \
+           'I am trying to,make one,which,contains,comma,without,space. LIKE,THIS. ' \
+           'The only purpose of this text file is to make a program that can count number of ' \
+           'words. I am tired of typing now!'
+    
+    content = file.write(text)
+    file.close()
+
+f = open("new file.txt",'r')
+data = f.read()
+print(data)
+'''To provide space after comma in the text file, comma correction'''
+comma_correction = data.replace(",",', ')
+print(comma_correction)
+logic = comma_correction.split(' ')
+print(logic)
+# print(len(logic))
+print(f"There are {len(logic)} words in the new text file.")
